@@ -1,0 +1,22 @@
+
+<div style="height:10px;"></div>
+
+<ul class="nav-ul" style="border-bottom: none;">
+	<li>
+		<span class="title">开发者公众账号接口</span>
+	</li>
+	<li {% if cur_nav == 'urltoken' %} class="cur-nav" {% endif %}><a href="/wxcms/urltoken/">
+		<span>URL 和  Token</span>
+	</a></li>
+	<li {% if cur_nav == 'msgtext' %} class="cur-nav" {% endif %}><a href="/wxcms/msgtext/list">
+		<span>文本消息</span>
+	</a></li>
+	
+	<li {% if cur_nav == 'msgnews' %} class="cur-nav" {% endif %}><a href="/wxcms/msgnews/list/">
+		<span>图文消息</span>
+	</a></li>
+	<li {% if cur_nav == 'menu' %} class="cur-nav" {% endif %}><a href="/wxcms/menu/list/">
+		<span>菜单管理</span>
+	</a></li>
+</ul>
+
