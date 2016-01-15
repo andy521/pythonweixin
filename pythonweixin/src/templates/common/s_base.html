@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/static/res/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/static/res/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/static/res/common.js"></script>
+		
+		<script type="text/javascript" src="/static/res/kindeditor/kindeditor-min.js"></script>
+		<script type="text/javascript" src="/static/res/kindeditor/zh_CN.js"></script>
+		<script type="text/javascript" src="/static/res/common.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="/static/res/kindeditor/themes/default/default.css" >
+		<link rel="stylesheet" type="text/css" href="/static/res/css/reset.css" />
+		
+		<title>免费微信开发者 Python&Django 源码</title>
+	</head>
+	
+	<body class="bg">
+		{% include "common/s_header.html" %}
+		
+		<div class="clearfloat"></div>
+		<div class="content">
+			<div class="block-nav">
+				{% include "common/s_nav.html" %}
+			</div>
+			{% block content %}{% endblock %}
+			<div class="clearfloat"></div>
+		</div>
+		
+		<div class="clearfloat"></div>
+		{% include "common/s_footer.html" %}
+	</body>
+	
+</html>
+

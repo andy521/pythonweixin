@@ -1,0 +1,79 @@
+
+
+{% extends "common/s_base.html" %}
+
+{% block content %}
+	<div class="block-content" >
+		<div class="block-content-nav">
+			<span class="title">图文消息 添加/修改</span>
+		</div>
+		
+		<div class="block-content-description">
+			<span>
+				如果 <span style="color:#555;">关键字 </span> 
+				为 <span style="color:#555;">subscribe</span> ，那么此消息为订阅消息
+			</span>
+		</div>
+		
+		<div class="block-content-content">
+			<form class="fm-form" action="" enctype="multipart/form-data" method="post">
+				{%csrf_token%}
+				<input type="hidden" name="id" value="{{accountMsg.id}}"/>
+				<ul>
+					<li>
+						<label>关键字 </label>
+						<input id="id_inputCode" type="text" name="inputCode" value="{{accountMsg.inputCode|default:''}}">
+					</li>
+					<li>
+						<label>作者 </label>
+						<input type="text" name="author" maxlength="10" value="{{accountMsg.accountnews.author|default:''}}" ><span style="color:#b4b4b4;"> &lt;10字 </span>
+					</li>
+					<li>
+						<label>标题 </label>
+						<input name="title" type="text" style="width:452px;" value="{{accountMsg.accountnews.title|default:''}}"/>
+					</li>
+					<li>
+						<label>简介 </label>
+					</li>
+					<li style="margin-top:-15px;">
+						<label></label>
+						<textarea name="brief" rows="3" cols="60" style="width:452px;">{{accountMsg.accountnews.brief|default:''}}</textarea>
+						<span class="helptext">长度 &lt; 100 字</span>
+					</li>
+					<li>
+						<label>封面图片 </label>
+						<input type="file" name="imageFile"/>
+					</li>
+					{% if accountMsg.accountnews.picPath %}
+					<li>
+						<label></label>
+						<img src="/static/{{accountMsg.accountnews.picPath}}" style="height:100px;border:1px solid #eee;">
+					</li>
+					{% endif %}
+					
+					<li>
+						<label>内容 </label>
+						<span style="color:#ccc"> 如果填写了下方的 <span style="color:#555;">原文链接</span> ，内容可以不填写，微信中点击消息，自动跳转到原文链接</span>
+					</li>
+					<li style="margin-left:86px;">
+						<textarea name="description" style="width:452px;height:300px;visibility:hidden;">{{accountMsg.accountnews.description|default:''}}</textarea>
+					</li>
+					<li>
+						<label>原文链接 </label>
+						<input type="text" name="fromurl" value="{{accountMsg.accountnews.url|default:''}}" style="width:452px;"/>
+					</li>
+				</ul>
+				
+				<div style="margin-left:75px;margin-top: 20px;">
+					<input class="btn" type="submit" value="保 存"/>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var editor = simpleKindeditor("description");
+	</script>
+{% endblock %}
+
+
