@@ -1,16 +1,18 @@
 
 感谢您使用PythonWeiXin
+预览效果：www.jeeweixin.com 
 
 版本V1.0
 发布时间：20151208
 构建：Python2.7 + Django1.5 + MySql5.6
+
 
 使用教程请访问我们的网站：
 微信派：免费的微信开发者源码服务平台
 www.weixinpy.com 
 weixin program for you
 
-看效果：www.jeeweixin.com 
+
 
 版权申明
 1. 源码项目版权、知识产权归微信派(南京匠成信息科技有限公司)所有。
