@@ -1,7 +1,7 @@
 
 感谢您使用PythonWeiXin
 
-版本V2.0 
+版本V2.0
 发布时间：20151208
 构建：Python2.7 + Django1.5 + MySql5.6
 
